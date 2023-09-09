@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { HiMenuAlt4, HiX } from 'react-icons/hi';
+import { motion } from 'framer-motion';
 
 import { images } from '../../constants';
 import './Navbar.scss';
@@ -17,6 +19,10 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+
+      <div className='app__navbar-menu'>
+
+      </div>
     </nav>
   )
 }
