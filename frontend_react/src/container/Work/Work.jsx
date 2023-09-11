@@ -7,6 +7,8 @@ import { urlFor, client } from '../../client';
 import './Work.scss';
 
 const Work = () => {
+  const [works, setWorks] = useState([]);
+  const [filterWork, setFilterWork] = useState([]);
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
