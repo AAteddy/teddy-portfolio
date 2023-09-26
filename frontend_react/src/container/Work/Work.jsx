@@ -40,9 +40,9 @@ const Work = () => {
 
   return (
     <>
-      <h2 className='head-text' >My Creative <span>Portfolio </span> Section</h2>
+      <h2 className="head-text" >My Creative <span>Portfolio </span> Section</h2>
 
-      <div className='app__work-filter' >
+      <div className="app__work-filter" >
         {['Frontend', 'Web App', 'FullStack', 'Mobile App', 'All'].map((item, index) => (
           <div 
             key={index}
@@ -57,19 +57,19 @@ const Work = () => {
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className='app__work-portfolio'
+        className="app__work-portfolio"
       >
         {filterWork.map((work, index) => (
-          <div className='app__work-item app__flex' key={index} >
-            <div className='app__work-img app__flex' >
+          <div className="app__work-item app__flex" key={index} >
+            <div className="app__work-img app__flex" >
               <img src={urlFor(work.imgUrl)} alt={work.name} />
 
               <motion.div
                 whileHover={{opacity: [0, 1]}}
                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
-                className='app__work-hover app__flex'
+                className="app__work-hover app__flex"
               >
-                <a href={work.projectLink} target='_blank" rel="noreferrer'>
+                <a href={work.projectLink} target="_blank" rel="noreferrer">
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.90] }}
@@ -79,7 +79,7 @@ const Work = () => {
                     <AiFillEye />
                   </motion.div>
                 </a>
-                <a href={work.codeLink} target='_blank" rel="noreferrer'>
+                <a href={work.codeLink} target="_blank" rel="noreferrer">
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.90] }}
@@ -92,7 +92,7 @@ const Work = () => {
               </motion.div>            
             </div>
 
-            <div className='app__work-content app__flex' >
+            <div className="app__work-content app__flex" >
               <h4 className="bold-text">{work.title}</h4>
               <p className="p-text" style={{ marginTop: 10 }}>{work.description}</p>
 
@@ -110,5 +110,5 @@ const Work = () => {
 export default AppWrap(
   MotionWrap(Work, 'app__works'),
    'work',
-   "app__primarybg"
+   'app__primarybg',
    );
