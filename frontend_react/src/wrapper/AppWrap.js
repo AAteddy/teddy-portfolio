@@ -1,7 +1,10 @@
 import React from 'react';
 import { NavigationDots, SocialMedia } from '../components';
 
-const AppWrap = (Component, idName, classNames) => function HOC() {
+const AppWrap = (Component, idName, classNames) => 
+function HOC() {
+  const date = new Date();
+  const year = date.getFullYear();
   return (
     <div id={idName} className={'app__container ${classNames'} >
         <SocialMedia />
@@ -10,8 +13,8 @@ const AppWrap = (Component, idName, classNames) => function HOC() {
             <Component />
 
             <div className="copyright" >
-                <p className="p-text" >@2023 TEDROS</p>
-                <p className="p-text" >All Rights Reserved</p>
+                <p className="p-text" >{"@"+year+" TEDROS"}</p>
+                <p className="p-text" >All rights reserved</p>
             </div>
         </div>
         <NavigationDots active={idName} />
